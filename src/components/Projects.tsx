@@ -16,7 +16,7 @@ export default function Projects() {
             title="¡Creando Música con Estructuras de Datos! Proyecto de Reproductor de Música en Java"
             description="Este proyecto me permitió aplicar mis conocimientos en estructuras de datos, para crear una aplicación funcional y entretenida. El reproductor de música no solo reproduce archivos MP3, sino que también extrae metadatos y presenta una interfaz gráfica moderna.
 "
-            image="https://private-user-images.githubusercontent.com/88981717/388214329-65b45761-6f41-4c50-a952-d902c80a7a66.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIwNzUwNzUsIm5iZiI6MTc0MjA3NDc3NSwicGF0aCI6Ii84ODk4MTcxNy8zODgyMTQzMjktNjViNDU3NjEtNmY0MS00YzUwLWE5NTItZDkwMmM4MGE3YTY2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzE1VDIxMzkzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ4ZDViZjhlOWM5M2RhNTc5NTFjYjAyMmY3MzcwNGI4OWJjNTA2MGVhODE4NWM2N2Q1MDEzYjVhYzk3YWVlNGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.AuuDjZNjWcv4VieHIzPAYWTtkAhvhquM0lHO9QQXMa8"
+            image="https://media.licdn.com/dms/image/v2/D4E2DAQEHrNGmG8p9xQ/profile-treasury-image-shrink_800_800/B4EZWXjZ__H0AY-/0/1742004396458?e=1742702400&v=beta&t=Fv_SsKT0E1OwSGkxzcTMbfG4-ZQasEd_0eGYWk7XPg0"
             technologies={[
               { name: "Java.", icon: "Java" },
             ]}

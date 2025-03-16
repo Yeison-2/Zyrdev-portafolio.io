@@ -28,7 +28,7 @@ export default function About() {
           <div className="lg:col-span-2 h-full flex justify-center lg:justify-end">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-primary shadow-xl animate-float">
               <img 
-                src="public\photo.webp" 
+                src="https://avatars.githubusercontent.com/u/88981717?v=4" 
                 alt="Yeison Romero" 
                 className="w-full h-full object-cover object-center" 
                 loading="lazy"

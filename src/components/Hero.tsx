@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
             <div className="relative w-100 h-48 rounded-full overflow-hidden border-0 border-primary shadow-lg">
               <img 
-                src="public\photo.webp" 
+                src="https://avatars.githubusercontent.com/u/88981717?v=4" 
                 alt="Profile" 
                 className="w-full h-full object-cover"
                 loading="lazy"
