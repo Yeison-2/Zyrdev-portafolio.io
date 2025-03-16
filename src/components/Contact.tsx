@@ -23,7 +23,7 @@ export default function Contact() {
           
           <div className="flex justify-center gap-6 mb-10">
             <a 
-              href="https://github.com/midudev" 
+              href="https://github.com/Yeison-2" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors duration-300"
@@ -33,7 +33,7 @@ export default function Contact() {
             </a>
             
             <a 
-              href="https://linkedin.com/in/midudev" 
+              href="https://www.linkedin.com/in/yeison-stiven-romero-salinas-60b410223/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors duration-300"
@@ -42,19 +42,11 @@ export default function Contact() {
               <Linkedin size={20} />
             </a>
             
-            <a 
-              href="https://twitter.com/midudev" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors duration-300"
-              aria-label="Twitter"
-            >
-              <Twitter size={20} />
-            </a>
+            
           </div>
           
           <a
-            href="mailto:contact@midudev.com"
+            href="thekarmaplaydev@gmail.com"
             className={cn(
               "group flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary text-white font-medium transition-all duration-300 relative overflow-hidden",
               "before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/80 before:to-blue-400 before:translate-x-[-100%] before:hover:translate-x-0 before:transition-transform before:duration-300"

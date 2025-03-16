@@ -48,7 +48,7 @@ export default function Header() {
       <div className="container max-w-7xl mx-auto px-6">
         <nav className="flex items-center justify-between">
           <a href="#" className="text-2xl font-bold text-gradient">
-            midudev
+          Zyrdev
           </a>
 
           {isMobile ? (

@@ -13,28 +13,28 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ProjectCard
-            title="SVGL - A beautiful library with SVG logos"
-            description="Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS."
-            image="/lovable-uploads/ff644640-5865-419f-9fa8-28ca4826d121.png"
+            title="¡Creando Música con Estructuras de Datos! Proyecto de Reproductor de Música en Java"
+            description="Este proyecto me permitió aplicar mis conocimientos en estructuras de datos, para crear una aplicación funcional y entretenida. El reproductor de música no solo reproduce archivos MP3, sino que también extrae metadatos y presenta una interfaz gráfica moderna.
+"
+            image="https://private-user-images.githubusercontent.com/88981717/388214329-65b45761-6f41-4c50-a952-d902c80a7a66.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIwNzUwNzUsIm5iZiI6MTc0MjA3NDc3NSwicGF0aCI6Ii84ODk4MTcxNy8zODgyMTQzMjktNjViNDU3NjEtNmY0MS00YzUwLWE5NTItZDkwMmM4MGE3YTY2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzE1VDIxMzkzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ4ZDViZjhlOWM5M2RhNTc5NTFjYjAyMmY3MzcwNGI4OWJjNTA2MGVhODE4NWM2N2Q1MDEzYjVhYzk3YWVlNGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.AuuDjZNjWcv4VieHIzPAYWTtkAhvhquM0lHO9QQXMa8"
             technologies={[
-              { name: "Next.js", icon: "nextjs" },
-              { name: "Tailwind CSS", icon: "tailwind" }
+              { name: "Java.", icon: "Java" },
             ]}
-            codeUrl="https://github.com/username/project1"
-            demoUrl="https://project1-demo.com"
+            codeUrl="https://github.com/Yeison-2/Reproductor-de-musica"
+            
             delay={100}
           />
-          
-          <ProjectCard
-            title="AdventJS - Retos de programación con JavaScript y TypeScript"
-            description="Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS."
-            image="/lovable-uploads/b452c680-7ee2-4b7e-8e15-4a6169c7af74.png"
+
+            <ProjectCard
+            title="Análisis Estadístico"
+            description="Este proyecto presenta un análisis detallado del uso de aplicaciones móviles y el comportamiento del usuario en un grupo de 700 personas. El objetivo principal es comprender los patrones de uso de aplicaciones y el comportamiento del usuario, y extraer conclusiones significativas basadas en los datos proporcionados."
+            image="https://github.com/Yeison-2/Estadistica/blob/main/diagrama_dispersion.png?raw=true"
             technologies={[
-              { name: "Next.js", icon: "nextjs" },
-              { name: "Tailwind CSS", icon: "tailwind" }
+              { name: "Python.", icon: "Python" },
             ]}
-            demoUrl="https://project2-demo.com"
-            delay={200}
+            codeUrl="https://github.com/Yeison-2/Estadistica"
+            
+            delay={100}
           />
         </div>
       </div>

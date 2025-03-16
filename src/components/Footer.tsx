@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} midudev. Casi todos los derechos reservados
+            © {currentYear} Zyrdev. Casi todos los derechos reservados
           </div>
           
           <div className="flex gap-6">
@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex items-center gap-1 text-sm">
             <span>Hecho con</span>
             <Heart size={14} className="text-red-500 animate-pulse-slow" fill="currentColor" />
-            <span>por midudev</span>
+            <span>por Zirdev</span>
           </div>
         </div>
       </div>

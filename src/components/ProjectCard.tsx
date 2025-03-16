@@ -5,7 +5,7 @@ import { useState } from "react";
 
 interface Technology {
   name: string;
-  icon: "nextjs" | "tailwind";
+  icon: "nextjs" | "tailwind" | "Java" | "SQL" | "Python";
 }
 
 interface ProjectCardProps {
@@ -41,6 +41,19 @@ export default function ProjectCard({
         return (
           <div className="flex items-center gap-1 bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">
             <span>Tailwind CSS</span>
+          </div>
+        );
+        case "Java":
+        return (
+          <div className="flex items-center gap-1 bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">
+            <span>Java</span>
+          </div>
+        );
+
+        case "Python":
+        return (
+          <div className="flex items-center gap-1 bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">
+            <span>Python</span>
           </div>
         );
       default:

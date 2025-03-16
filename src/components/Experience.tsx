@@ -13,27 +13,11 @@ export default function Experience() {
 
         <div className="space-y-2">
           <ExperienceItem
-            title="Creador de Contenido"
-            company="Twitch"
+            title="Semillerista investigador TECSI"
+            company="Fundación Universitaria Juan de Castellanos"
             period="Actualmente..."
-            description="Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub."
+            description="Participo activamente en el semillero de investigación TECSI, donde mejoro mis habilidades en Inteligencia Artificial. Mis responsabilidades incluyen investigar sobre el uso de la inteligencia artificial en el contexto de la instituciones educativas su viabilidad y como se puede implementar un sistema usando este valioso recurso."
             delay={100}
-          />
-          
-          <ExperienceItem
-            title="Lead Frontend Developer"
-            company="Company XYZ"
-            period="2018 - 2021"
-            description="Lideré un equipo de 5 desarrolladores en la creación de aplicaciones web utilizando React, TypeScript y TailwindCSS. Implementé metodologías ágiles y mejoré el rendimiento de las aplicaciones en un 40%."
-            delay={200}
-          />
-          
-          <ExperienceItem
-            title="Senior Software Engineer"
-            company="Tech Startup"
-            period="2015 - 2018"
-            description="Desarrollé aplicaciones web de alto rendimiento utilizando las últimas tecnologías frontend. Colaboré estrechamente con equipos de diseño y backend para crear experiencias de usuario excepcionales."
-            delay={300}
           />
         </div>
       </div>

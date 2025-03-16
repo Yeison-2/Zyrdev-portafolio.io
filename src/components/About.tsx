@@ -11,25 +11,25 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-          <div className="lg:col-span-3 space-y-6 text-lg">
-            <p className="text-balance animate-fade-in-up">
-              Me llamo Miguel Ángel pero mis amigos me llaman midu. Empecé en la programación con un Amstrad, tenía 10 años. Actualmente estoy <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">liderando equipos de desarrollo en multinacionales</span>.
-            </p>
-            
-            <p className="text-balance animate-fade-in-up animation-delay-100">
-              Algunos de mis éxitos incluyen <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">colaborar con Mozilla para el desarrollo de las primeras apps en su sistema FirefoxOS</span>. Aunque hoy está desaparecido fue un gran avance en el mundo del desarrollo web.
-            </p>
-            
-            <p className="text-balance animate-fade-in-up animation-delay-200">
-              Como creador de contenido, cuento con <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">el canal de habla hispana más visto del mundo en la categoría de Software & Game Development en Twitch</span>. Mi objetivo es mejorar la empleabilidad de la comunidad hispana y el acceso a contenido de calidad.
-            </p>
-          </div>
+        <div className="lg:col-span-3 space-y-6 text-lg">
+    <p className="text-balance animate-fade-in-up">
+        Me llamo Yeison Romero pero el nombre de mi <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">marca personal es Zyrdev</span> y mi <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">pasión por la programación </span>se encendió en 2020 cuando descubrí el poder de <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Java</span>. Desde entonces, me he sumergido en el mundo del <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">backend</span>, encontrando en Java el lenguaje perfecto para construir soluciones sólidas y eficientes.
+    </p>
+
+    <p className="text-balance animate-fade-in-up animation-delay-100">
+        Este espacio es más que un repositorio de código; es una plataforma para mostrar mi <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">evolución como desarrollador</span>, conectar con otros profesionales y compartir lo que he aprendido. Mi meta es encontrar un entorno donde pueda seguir creciendo y aportando valor a través de mi trabajo.
+    </p>
+
+    <p className="text-balance animate-fade-in-up animation-delay-200">
+        Mi objetivo principal con este portafolio es darme a conocer, mostrar mis <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">habilidades en el desarrollo de backend con Java</span> y conectar con oportunidades laborales. Además, busco compartir mi conocimiento y experiencia con la comunidad de desarrolladores.
+    </p>
+</div>
           
           <div className="lg:col-span-2 h-full flex justify-center lg:justify-end">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-primary shadow-xl animate-float">
               <img 
-                src="/lovable-uploads/ad5440b9-bd5d-4719-85aa-7b93e56a430c.png" 
-                alt="Miguel Ángel (midu)" 
+                src="public\photo.webp" 
+                alt="Yeison Romero" 
                 className="w-full h-full object-cover object-center" 
                 loading="lazy"
               />
