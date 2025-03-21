@@ -10,8 +10,8 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
             <div className="relative w-100 h-48 rounded-full overflow-hidden border-0 border-primary shadow-lg">
               <img 
-                src="https://avatars.githubusercontent.com/u/88981717?v=4" 
-                alt="Profile" 
+                src="https://images.unsplash.com/photo-1582562124811-c09040d0a901"
+                alt="Gato naranja" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -23,7 +23,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            Hey, soy <span className="text-gradient">Zyrdev</span>
+            Hey, soy <span className="text-gradient">Whiskers</span>
           </h1>
 
           <p className="text-xl sm:text-2xl mb-4 text-muted-foreground animate-fade-in-up animation-delay-100">
