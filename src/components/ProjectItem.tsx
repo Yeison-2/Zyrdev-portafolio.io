@@ -1,6 +1,6 @@
 
 import { cn } from "@/lib/utils";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink, Code2 } from "lucide-react";
 import { useState } from "react";
 
 interface Technology {
@@ -24,80 +24,65 @@ export default function ProjectItem({
   delay = 0 
 }: ProjectItemProps) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const renderTechIcon = (icon: Technology["icon"]) => {
-    const baseClasses = "inline-flex items-center px-2 py-1 rounded text-xs font-semibold mr-2 mb-2";
+    const baseClasses = "inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-material";
     
-    switch (icon) {
-      case "Kotlin":
-        return (
-          <span className={`${baseClasses} bg-purple-600 text-white`}>
-            Kotlin
-          </span>
-        );
-      case "Android":
-        return (
-          <span className={`${baseClasses} bg-green-600 text-white`}>
-            Android
-          </span>
-        );
-      case "Room":
-        return (
-          <span className={`${baseClasses} bg-blue-600 text-white`}>
-            Room Database
-          </span>
-        );
-      case "MVVM":
-        return (
-          <span className={`${baseClasses} bg-indigo-600 text-white`}>
-            MVVM
-          </span>
-        );
-      case "Compose":
-        return (
-          <span className={`${baseClasses} bg-teal-500 text-white`}>
-            Jetpack Compose
-          </span>
-        );
-      case "Java":
-        return (
-          <span className={`${baseClasses} bg-orange-500 text-white`}>
-            Java
-          </span>
-        );
-      case "Python":
-        return (
-          <span className={`${baseClasses} bg-yellow-500 text-white`}>
-            Python
-          </span>
-        );
-      default:
-        return null;
-    }
+    // Estilo unificado para todos los badges
+    return (
+      <span className={cn(
+        baseClasses,
+        "glass text-muted-foreground",
+        "hover:text-foreground"
+      )}>
+        {icon === "Kotlin" && "Kotlin"}
+        {icon === "Android" && "Android"}
+        {icon === "Room" && "Room DB"}
+        {icon === "MVVM" && "MVVM"}
+        {icon === "Compose" && "Jetpack Compose"}
+        {icon === "Java" && "Java"}
+        {icon === "Python" && "Python"}
+      </span>
+    );
   };
   
   return (
-    <div 
+    <div
       className={cn(
-        "relative pl-8 border-l-2 border-secondary py-6 animate-fade-in-up",
-        "before:absolute before:content-[''] before:w-4 before:h-4 before:bg-primary before:rounded-full before:-left-[9px] before:top-7",
-        "hover:border-primary transition-colors duration-500"
+        "relative pl-8 border-l-2 border-secondary/50 py-6 animate-fade-in-up group",
+        "before:absolute before:content-[''] before:w-5 before:h-5 before:bg-primary before:rounded-full before:-left-[11px] before:top-7",
+        "before:border-2 before:border-background",
+        "hover:border-primary transition-material-slow"
       )}
-      style={{ animationDelay: `${delay}ms` }}
+      style={{ 
+        animationDelay: `${delay}ms`,
+      }}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setMousePosition({ x: 0, y: 0 });
+      }}
     >
-      <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-1">
-        <h3 className="text-xl font-bold">{title}</h3>
+      
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+        <h3 className="text-xl font-bold group-hover:text-primary transition-material">
+          {title}
+        </h3>
       </div>
       
-      <div className="flex flex-wrap gap-1 mb-3">
+      <div className="flex flex-wrap gap-2 mb-4">
         {technologies.map((tech, index) => (
-          <div key={index}>{renderTechIcon(tech.icon)}</div>
+          <div 
+            key={index}
+            style={{ animationDelay: `${delay + index * 50}ms` }}
+            className="animate-fade-in-up"
+          >
+            {renderTechIcon(tech.icon)}
+          </div>
         ))}
       </div>
       
-      <p className="text-muted-foreground mb-4">{description}</p>
+      <p className="text-muted-foreground mb-4 leading-relaxed">{description}</p>
       
       {codeUrl && (
         <a
@@ -105,10 +90,13 @@ export default function ProjectItem({
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "inline-flex items-center gap-1 text-sm font-medium transition-all duration-300",
+            "group/btn inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-material",
+            "glass-strong hover:bg-primary/10 hover:scale-105",
+            "hover:shadow-material",
             isHovered ? "text-primary" : "text-muted-foreground"
           )}
         >
+          <Code2 size={16} />
           Ver código
           <ExternalLink 
             size={16} 

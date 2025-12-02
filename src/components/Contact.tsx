@@ -1,20 +1,34 @@
 
-import { Mail, ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, ArrowRight, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export default function Contact() {
   const [isHovered, setIsHovered] = useState(false);
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section id="contact" className="py-24 bg-muted/30">
-      <div className="container max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-3 mb-12">
+    <section id="contact" className="py-24 bg-muted/30 relative overflow-hidden">
+      {/* Fondo decorativo sutil */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent pointer-events-none" />
+      
+      <div className="container max-w-7xl mx-auto px-6 relative z-10">
+        <div 
+          ref={elementRef}
+          className={cn(
+            "flex items-center gap-3 mb-12",
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          )}
+        >
           <Mail className="text-primary" size={32} />
           <h2 className="text-3xl font-bold">Contacto</h2>
         </div>
 
-        <div className="max-w-3xl mx-auto glass p-8 rounded-2xl">
+        <div className={cn(
+          "max-w-3xl mx-auto glass-strong p-8 rounded-3xl shadow-material-xl",
+          isVisible ? "animate-scale-in animation-delay-200" : "opacity-0"
+        )}>
           <h3 className="text-2xl font-bold mb-6 text-center">¿Hablamos?</h3>
           
           <p className="text-muted-foreground text-center mb-8">
@@ -64,8 +78,7 @@ export default function Contact() {
           
           <div className="mt-6 text-center text-sm text-muted-foreground">
             <p>📧 ysromero@jdc.edu.co</p>
-            <p className="mt-1">📱 +57 3112330708</p>
-            <p className="mt-1">📍 Tunja, Colombia</p>
+            <p className="mt-1">📍 Bogotá D.C., Colombia</p>
           </div>
         </div>
       </div>

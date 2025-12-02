@@ -8,67 +8,70 @@
 
 @layer base {
   :root {
-    /* Light mode */
-    --background: 220 33% 99%;
-    --foreground: 240 10% 3.9%;
+    /* Light mode - Paleta Material Design 3 minimalista */
+    --background: 0 0% 100%;
+    --foreground: 240 5.3% 26.1%;
     
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 240 5.3% 26.1%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 240 5.3% 26.1%;
     
-    --primary: 230 70% 55%;
-    --primary-foreground: 0 0% 98%;
+    /* Primary: Azul Material Design 3 suave */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
     
+    /* Secondary: Neutro gris suave */
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     
-    --muted: 240 4.8% 95.9%;
+    --muted: 240 4.8% 96.9%;
     --muted-foreground: 240 3.8% 46.1%;
     
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    /* Accent: Verde Android suave */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --ring: 217 91% 60%;
     
     --radius: 0.75rem;
   }
  
   .dark {
-    /* Dark mode */
-    --background: 230 35% 7%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - Paleta coherente */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
     
-    --card: 230 35% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
     
-    --popover: 230 35% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
     
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
     
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
     
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
     
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 70% 45%;
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
     
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 217 91% 60%;
   }
 }
 
@@ -101,22 +104,35 @@
 }
 
 @layer utilities {
+  /* Glassmorphism mejorado Material Design 3 */
   .glass {
-    @apply bg-background/60 backdrop-blur-lg border border-border/50;
+    @apply bg-background/70 backdrop-blur-xl border border-border/40;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+  
+  .glass-strong {
+    @apply bg-background/80 backdrop-blur-2xl border border-border/60;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
   }
   
   .text-balance {
     text-wrap: balance;
   }
   
+  /* Gradientes sutiles Material Design 3 */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent;
   }
   
   .text-shadow {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animaciones de delay */
   .animation-delay-100 {
     animation-delay: 100ms;
   }
@@ -136,4 +152,36 @@
   .animation-delay-500 {
     animation-delay: 500ms;
   }
+  
+  /* Efectos 3D */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+  
+  /* Sombras Material Design 3 */
+  .shadow-material {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-material-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-material-xl {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 16px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Transiciones suaves Material Design */
+  .transition-material {
+    transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+  .transition-material-slow {
+    transition: all 260ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
 }
+

@@ -1,11 +1,24 @@
 
 import { GraduationCap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { cn } from "@/lib/utils";
 
 export default function Education() {
+  const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
+  
   return (
-    <section id="education" className="py-24 bg-muted/30">
-      <div className="container max-w-7xl mx-auto px-6">
-        <div className="flex items-center gap-3 mb-12">
+    <section id="education" className="py-24 bg-muted/30 relative">
+      {/* Fondo decorativo sutil */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent pointer-events-none" />
+      
+      <div className="container max-w-7xl mx-auto px-6 relative z-10">
+        <div 
+          ref={elementRef}
+          className={cn(
+            "flex items-center gap-3 mb-12",
+            isVisible ? "animate-fade-in-up" : "opacity-0"
+          )}
+        >
           <GraduationCap className="text-primary" size={32} />
           <h2 className="text-3xl font-bold">Educación</h2>
         </div>

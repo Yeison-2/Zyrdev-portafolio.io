@@ -1,0 +1,28 @@
+{
+  "name": "Zyrdev - Yeison Romero | Android Developer",
+  "short_name": "Zyrdev",
+  "description": "Portafolio de Yeison Stiven Romero Salinas (Zyrdev) - Android Developer especializado en Kotlin, Jetpack Compose y MVVM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "android"],
+  "lang": "es-CO",
+  "dir": "ltr"
+}
+

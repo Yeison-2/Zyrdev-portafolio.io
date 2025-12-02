@@ -1,0 +1,50 @@
+# robots.txt para Zyrdev - Portafolio Android Developer
+# https://zyrdev.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zyrdev.netlify.app/sitemap.xml
+
+# Permitir todos los bots de búsqueda
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+User-agent: Exabot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# No bloquear archivos importantes
+Allow: /sitemap.xml
+Allow: /googleaab7335c3672827c.html
+Allow: /mi_avatar.webp
+Allow: /logo.webp
+Allow: /favicon.ico
+
+# Crawl-delay (opcional, ayuda a no sobrecargar el servidor)
+Crawl-delay: 1
+
