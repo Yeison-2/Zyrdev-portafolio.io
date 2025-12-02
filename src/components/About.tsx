@@ -13,24 +13,24 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
         <div className="lg:col-span-3 space-y-6 text-lg">
     <p className="text-balance animate-fade-in-up">
-        Me llamo Mittens pero el nombre de mi <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">marca personal es Whiskers</span> y mi <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">pasión por la programación </span>se encendió en 2020 cuando descubrí el poder de <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Java</span>. Desde entonces, me he sumergido en el mundo del <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">backend</span>, encontrando en Java el lenguaje perfecto para construir soluciones sólidas y eficientes.
+        ¡Hola! Soy <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Yeison Romero (Zyrdev)</span>, un apasionado <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">desarrollador Android</span> enfocado en crear experiencias móviles fluidas y eficientes. Transformo ideas en aplicaciones nativas funcionales utilizando <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Kotlin</span> y el ecosistema moderno de Android (<span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Jetpack Compose</span>, Material Design 3).
     </p>
 
     <p className="text-balance animate-fade-in-up animation-delay-100">
-        Este espacio es más que un repositorio de código; es una plataforma para mostrar mi <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">evolución como desarrollador</span>, conectar con otros profesionales y compartir lo que he aprendido. Mi meta es encontrar un entorno donde pueda seguir creciendo y aportando valor a través de mi trabajo.
+        Me especializo en todo el <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">ciclo de vida del desarrollo</span>, desde la arquitectura hasta el despliegue. Actualmente participo como <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Android Developer & Investigador</span> en el Semillero TECSI de la Fundación Universitaria Juan de Castellanos, donde desarrollo soluciones móviles para el sector agroindustrial.
     </p>
 
     <p className="text-balance animate-fade-in-up animation-delay-200">
-        Mi objetivo principal con este portafolio es darme a conocer, mostrar mis <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">habilidades en el desarrollo de backend con Java</span> y conectar con oportunidades laborales. Además, busco compartir mi conocimiento y experiencia con la comunidad de desarrolladores.
+        Cuento con <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">certificación Scrum</span>, lo que me permite integrarme rápidamente en equipos ágiles y mantener una comunicación transparente. Mi objetivo es encontrar oportunidades como <span className="font-mono bg-secondary px-1.5 py-0.5 rounded">Android Developer</span> o proyectos freelance donde pueda aportar valor inmediato con código limpio y mantenible.
     </p>
 </div>
           
           <div className="lg:col-span-2 h-full flex justify-center lg:justify-end">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-primary shadow-xl animate-float">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-primary shadow-xl animate-float bg-white">
               <img 
-                src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1"
-                alt="Gato gris" 
-                className="w-full h-full object-cover object-center" 
+                src="/mi_avatar.webp"
+                alt="Android Developer Avatar - Yeison Romero" 
+                className="w-full h-full object-contain p-4"
                 loading="lazy"
               />
             </div>

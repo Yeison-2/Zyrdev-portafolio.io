@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex items-center gap-1 text-sm">
             <span>Hecho con</span>
             <Heart size={14} className="text-red-500 animate-pulse-slow" fill="currentColor" />
-            <span>por Zirdev</span>
+            <span>por Zyrdev</span>
           </div>
         </div>
       </div>

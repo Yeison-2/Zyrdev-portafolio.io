@@ -1,6 +1,6 @@
 
 import { Code } from "lucide-react";
-import ProjectCard from "./ProjectCard";
+import ProjectItem from "./ProjectItem";
 
 export default function Projects() {
   return (
@@ -11,30 +11,38 @@ export default function Projects() {
           <h2 className="text-3xl font-bold">Proyectos</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ProjectCard
-            title="¡Creando Música con Estructuras de Datos! Proyecto de Reproductor de Música en Java"
-            description="Este proyecto me permitió aplicar mis conocimientos en estructuras de datos, para crear una aplicación funcional y entretenida. El reproductor de música no solo reproduce archivos MP3, sino que también extrae metadatos y presenta una interfaz gráfica moderna.
-"
-            image="https://media.licdn.com/dms/image/v2/D4E2DAQEHrNGmG8p9xQ/profile-treasury-image-shrink_800_800/B4EZWXjZ__H0AY-/0/1742004396458?e=1742702400&v=beta&t=Fv_SsKT0E1OwSGkxzcTMbfG4-ZQasEd_0eGYWk7XPg0"
+        <div className="space-y-2">
+          <ProjectItem
+            title="Sistema de Gestión de Recolección de Café"
+            description="Aplicación Android nativa desarrollada para digitalizar el proceso de recolección de café en zonas rurales. Implementa arquitectura MVVM con Kotlin y Jetpack Compose, garantizando una experiencia de usuario moderna y fluida. La solución incluye persistencia de datos offline mediante Room Database, permitiendo operatividad completa sin conexión a internet, esencial para caficultores en áreas remotas."
             technologies={[
-              { name: "Java.", icon: "Java" },
+              { name: "Kotlin", icon: "Kotlin" },
+              { name: "Android", icon: "Android" },
+              { name: "Jetpack Compose", icon: "Compose" },
+              { name: "MVVM", icon: "MVVM" },
+              { name: "Room", icon: "Room" },
             ]}
-            codeUrl="https://github.com/Yeison-2/Reproductor-de-musica"
-            
             delay={100}
           />
 
-            <ProjectCard
-            title="Análisis Estadístico"
-            description="Este proyecto presenta un análisis detallado del uso de aplicaciones móviles y el comportamiento del usuario en un grupo de 700 personas. El objetivo principal es comprender los patrones de uso de aplicaciones y el comportamiento del usuario, y extraer conclusiones significativas basadas en los datos proporcionados."
-            image="https://github.com/Yeison-2/Estadistica/blob/main/diagrama_dispersion.png?raw=true"
+          <ProjectItem
+            title="Reproductor de Música con Estructuras de Datos"
+            description="Aplicación de escritorio desarrollada en Java que demuestra el dominio de estructuras de datos avanzadas. El reproductor no solo reproduce archivos MP3, sino que también extrae y gestiona metadatos musicales, implementando algoritmos eficientes para la organización y búsqueda de contenido. Incluye una interfaz gráfica moderna construida con Swing."
             technologies={[
-              { name: "Python.", icon: "Python" },
+              { name: "Java", icon: "Java" },
+            ]}
+            codeUrl="https://github.com/Yeison-2/Reproductor-de-musica"
+            delay={200}
+          />
+
+          <ProjectItem
+            title="Análisis Estadístico de Comportamiento Móvil"
+            description="Proyecto de análisis de datos que examina patrones de uso de aplicaciones móviles en una muestra de 700 usuarios. Utiliza Python para procesamiento estadístico, visualización de datos y modelado predictivo. El análisis incluye correlaciones, regresiones y visualizaciones interactivas que revelan insights sobre el comportamiento del usuario en dispositivos móviles."
+            technologies={[
+              { name: "Python", icon: "Python" },
             ]}
             codeUrl="https://github.com/Yeison-2/Estadistica"
-            
-            delay={100}
+            delay={300}
           />
         </div>
       </div>

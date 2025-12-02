@@ -33,7 +33,7 @@ export default function Contact() {
             </a>
             
             <a 
-              href="https://www.linkedin.com/in/yeison-stiven-romero-salinas-60b410223/" 
+              href="https://www.linkedin.com/in/zyrdev" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-white transition-colors duration-300"
@@ -41,12 +41,10 @@ export default function Contact() {
             >
               <Linkedin size={20} />
             </a>
-            
-            
           </div>
           
           <a
-            href="thekarmaplaydev@gmail.com"
+            href="mailto:ysromero@jdc.edu.co"
             className={cn(
               "group flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary text-white font-medium transition-all duration-300 relative overflow-hidden",
               "before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/80 before:to-blue-400 before:translate-x-[-100%] before:hover:translate-x-0 before:transition-transform before:duration-300"
@@ -63,6 +61,12 @@ export default function Contact() {
               )} 
             />
           </a>
+          
+          <div className="mt-6 text-center text-sm text-muted-foreground">
+            <p>📧 ysromero@jdc.edu.co</p>
+            <p className="mt-1">📱 +57 3112330708</p>
+            <p className="mt-1">📍 Tunja, Colombia</p>
+          </div>
         </div>
       </div>
     </section>
