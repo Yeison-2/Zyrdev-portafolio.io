@@ -1,0 +1,19 @@
+## Redirects para SPA (Single Page Application)
+## https://zyrdev.netlify.app
+
+# Redireccionar todas las rutas a index.html para que el router de React funcione
+/*    /index.html   200
+
+# Redirects específicos (opcional - para URLs antiguas o alternativas)
+/home              /                301
+/portafolio        /#projects       301
+/proyectos         /#projects       301
+/contacto          /#contact        301
+/experiencia       /#experience     301
+/educacion         /#education      301
+/sobre-mi          /#about          301
+/acerca-de         /#about          301
+
+# Redireccionar variantes del dominio (si tienes)
+# http://zyrdev.netlify.app/*  https://zyrdev.netlify.app/:splat  301!
+# www.zyrdev.com/*             https://zyrdev.netlify.app/:splat  301!
