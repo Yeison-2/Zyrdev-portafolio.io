@@ -26,6 +26,22 @@ export default function Projects() {
 
         <div className="space-y-2">
           <ProjectItem
+            title="Conexión a API REST - RandomUser"
+            description="Aplicación Android nativa que consume la API pública RandomUser.me para mostrar perfiles de usuarios aleatorios. Implementa arquitectura MVVM con Kotlin, Retrofit para las peticiones HTTP y Jetpack Compose para la UI moderna. Incluye manejo de estados de carga, errores y cacheo de imágenes con Coil. Demuestra las mejores prácticas en consumo de APIs REST y arquitectura Android moderna."
+            technologies={[
+              { name: "Kotlin", icon: "Kotlin" },
+              { name: "Android", icon: "Android" },
+              { name: "Jetpack Compose", icon: "Compose" },
+              { name: "MVVM", icon: "MVVM" },
+              { name: "Retrofit", icon: "Retrofit" },
+            ]}
+            codeUrl="https://github.com/Yeison-2/Android-connection-API-REST-randomuser"
+            imageUrl="https://github.com/user-attachments/assets/db435f84-1221-4426-a89a-3274803f4f28"
+            imageAlt="Demostración de la aplicación Android consumiendo API REST RandomUser"
+            delay={50}
+          />
+
+          <ProjectItem
             title="Sistema de Gestión de Recolección de Café"
             description="Aplicación Android nativa desarrollada para digitalizar el proceso de recolección de café en zonas rurales. Implementa arquitectura MVVM con Kotlin y Jetpack Compose, garantizando una experiencia de usuario moderna y fluida. La solución incluye persistencia de datos offline mediante Room Database, permitiendo operatividad completa sin conexión a internet, esencial para caficultores en áreas remotas."
             technologies={[

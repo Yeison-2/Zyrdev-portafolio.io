@@ -1,11 +1,11 @@
 
 import { cn } from "@/lib/utils";
-import { ExternalLink, Code2 } from "lucide-react";
+import { ExternalLink, Code2, Play } from "lucide-react";
 import { useState } from "react";
 
 interface Technology {
   name: string;
-  icon: "Kotlin" | "Android" | "Room" | "MVVM" | "Compose" | "Java" | "Python";
+  icon: "Kotlin" | "Android" | "Room" | "MVVM" | "Compose" | "Java" | "Python" | "Retrofit";
 }
 
 interface ProjectItemProps {
@@ -13,6 +13,8 @@ interface ProjectItemProps {
   technologies: Technology[];
   description: string;
   codeUrl?: string;
+  imageUrl?: string;
+  imageAlt?: string;
   delay?: number;
 }
 
@@ -21,9 +23,12 @@ export default function ProjectItem({
   technologies,
   description,
   codeUrl,
+  imageUrl,
+  imageAlt,
   delay = 0 
 }: ProjectItemProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const renderTechIcon = (icon: Technology["icon"]) => {
     const baseClasses = "inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-material";
@@ -42,6 +47,7 @@ export default function ProjectItem({
         {icon === "Compose" && "Jetpack Compose"}
         {icon === "Java" && "Java"}
         {icon === "Python" && "Python"}
+        {icon === "Retrofit" && "Retrofit"}
       </span>
     );
   };
@@ -58,10 +64,7 @@ export default function ProjectItem({
         animationDelay: `${delay}ms`,
       }}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => {
-        setIsHovered(false);
-        setMousePosition({ x: 0, y: 0 });
-      }}
+      onMouseLeave={() => setIsHovered(false)}
     >
       
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
@@ -82,7 +85,44 @@ export default function ProjectItem({
         ))}
       </div>
       
-      <p className="text-muted-foreground mb-4 leading-relaxed">{description}</p>
+      {/* Contenedor Grid para descripción e imagen */}
+      <div className={cn(
+        "gap-6 mb-4",
+        imageUrl ? "grid md:grid-cols-[1fr_200px] items-start" : ""
+      )}>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
+        
+        {/* Imagen/GIF de demostración */}
+        {imageUrl && (
+          <div className="relative group/image">
+            <div className={cn(
+              "relative rounded-lg overflow-hidden border-2 border-primary/20",
+              "transition-all duration-300",
+              "hover:border-primary hover:shadow-lg hover:shadow-primary/20",
+              "hover:scale-105"
+            )}>
+              {!imageLoaded && (
+                <div className="absolute inset-0 bg-muted/50 animate-pulse flex items-center justify-center">
+                  <Play className="text-primary animate-pulse" size={32} />
+                </div>
+              )}
+              <img
+                src={imageUrl}
+                alt={imageAlt || `Demostración de ${title}`}
+                className={cn(
+                  "w-full h-auto object-cover transition-opacity duration-300",
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                )}
+                onLoad={() => setImageLoaded(true)}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-2">
+                <span className="text-white text-xs font-medium">Ver demo</span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
       
       {codeUrl && (
         <a
