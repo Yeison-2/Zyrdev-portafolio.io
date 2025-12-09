@@ -8,7 +8,7 @@ export default function Experience() {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
   
   return (
-    <section id="experience" className="py-24 relative">
+    <section id="experience" className="py-24 relative" aria-labelledby="experience-heading">
       {/* Fondo decorativo sutil */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent pointer-events-none" />
       
@@ -20,9 +20,13 @@ export default function Experience() {
             isVisible ? "animate-fade-in-up" : "opacity-0"
           )}
         >
-          <Briefcase className="text-primary" size={32} />
-          <h2 className="text-3xl font-bold">Experiencia laboral</h2>
+          <Briefcase className="text-primary" size={32} aria-hidden="true" />
+          <h2 id="experience-heading" className="text-3xl font-bold">Experiencia Profesional - Desarrollo Android</h2>
         </div>
+
+        <p className="text-muted-foreground text-lg mb-8 max-w-3xl">
+          Más de <strong>3 años de experiencia</strong> desarrollando <strong>aplicaciones Android nativas con Kotlin</strong>, implementando arquitecturas modernas y liderando proyectos de digitalización tecnológica.
+        </p>
 
         <div className="space-y-2">
           <ExperienceItem

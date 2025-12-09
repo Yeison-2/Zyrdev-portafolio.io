@@ -8,7 +8,7 @@ export default function Projects() {
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.2, triggerOnce: true });
   
   return (
-    <section id="projects" className="py-24 bg-muted/30 relative overflow-hidden">
+    <section id="projects" className="py-24 bg-muted/30 relative overflow-hidden" aria-labelledby="projects-heading">
       {/* Fondo decorativo sutil */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/2 to-transparent pointer-events-none" />
       
@@ -20,9 +20,13 @@ export default function Projects() {
             isVisible ? "animate-fade-in-up" : "opacity-0"
           )}
         >
-          <Code className="text-primary" size={32} />
-          <h2 className="text-3xl font-bold">Proyectos</h2>
+          <Code className="text-primary" size={32} aria-hidden="true" />
+          <h2 id="projects-heading" className="text-3xl font-bold">Proyectos Android - Kotlin & Jetpack Compose</h2>
         </div>
+
+        <p className="text-muted-foreground text-lg mb-8 max-w-3xl">
+          Portafolio de <strong>aplicaciones Android nativas</strong> desarrolladas con <strong>Kotlin</strong>, <strong>Jetpack Compose</strong> y arquitectura <strong>MVVM</strong>. Cada proyecto demuestra implementación de mejores prácticas, código limpio y experiencias de usuario optimizadas para dispositivos móviles.
+        </p>
 
         <div className="space-y-2">
           <ProjectItem
