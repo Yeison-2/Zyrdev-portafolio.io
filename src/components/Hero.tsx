@@ -4,7 +4,9 @@ import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen pt-32 pb-16 flex flex-col justify-center"
+    <section 
+      className="relative min-h-screen pt-32 pb-16 flex flex-col justify-center"
+      aria-label="Sección principal - Presentación de Zyrdev"
     >
       {/* Fondo sutil con microgradiente */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-primary/2 pointer-events-none" />
@@ -15,9 +17,11 @@ export default function Hero() {
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border border-border shadow-material">
               <img 
                 src="https://github.com/Yeison-2.png"
-                alt="Yeison Romero" 
+                alt="Yeison Stiven Romero Salinas - Zyrdev - Desarrollador Android especializado en Kotlin y Jetpack Compose" 
                 className="w-full h-full object-cover"
                 loading="eager"
+                width="160"
+                height="160"
               />
             </div>
             <div className="glass-strong px-4 py-2 rounded-full inline-flex items-center text-sm font-medium animate-pulse-slow shadow-material">
@@ -27,14 +31,14 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up animation-delay-100">
-            Hola, soy <span className="text-gradient">Yeison Romero</span>
+            Hola, soy <span className="text-gradient">Yeison Romero</span> <span className="sr-only">también conocido como Zyrdev</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl mb-4 text-muted-foreground animate-fade-in-up animation-delay-200 leading-relaxed">
-            <span className="font-semibold">Android Developer</span> apasionado por crear experiencias móviles fluidas y eficientes. Especializado en <span className="font-semibold text-primary">Kotlin</span>, <span className="font-semibold text-primary">Jetpack Compose</span> y <span className="font-semibold text-primary">MVVM</span>. Actualmente estudiando <span className="font-semibold">Ingeniería de Sistemas</span> (7mo semestre). Ubicado en Bogotá D.C., Colombia.
-          </p>
+          <h2 className="text-xl sm:text-2xl mb-4 text-muted-foreground animate-fade-in-up animation-delay-200 leading-relaxed">
+            <strong>Android Developer</strong> apasionado por crear experiencias móviles fluidas y eficientes. Especializado en <strong className="text-primary">Kotlin</strong>, <strong className="text-primary">Jetpack Compose</strong> y <strong className="text-primary">MVVM</strong>. Actualmente estudiando <strong>Ingeniería de Sistemas</strong> (7mo semestre) en Bogotá D.C., Colombia.
+          </h2>
 
-          <div className="flex flex-wrap gap-3 mt-6 mb-8 animate-fade-in-up animation-delay-300">
+          <div className="flex flex-wrap gap-3 mt-6 mb-8 animate-fade-in-up animation-delay-300" role="list" aria-label="Tecnologías principales">
             {[
               { icon: Smartphone, label: "Android Native" },
               { icon: null, label: "Kotlin" },
@@ -43,6 +47,7 @@ export default function Hero() {
             ].map((tech, index) => (
               <div
                 key={index}
+                role="listitem"
                 className={cn(
                   "glass px-3 py-1.5 rounded-full text-sm flex items-center gap-2",
                   "text-muted-foreground font-medium",
